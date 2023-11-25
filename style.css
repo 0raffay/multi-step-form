@@ -1,0 +1,515 @@
+@font-face {
+    font-family: ff-1;
+    src: url(assets/fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: ff-2;
+    src: url(assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: ff-3;
+    src: url(assets/fonts/Ubuntu-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ff-1;
+    user-select: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+span {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.text-align-left {
+    justify-self: center;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EEF5FF;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+
+.evenColumns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.formContainer {
+    width: 1000px;
+    min-height: 600px;
+    background-color: #fff;
+    padding-block: 15px;
+    padding-left: 15px;
+    padding-right: 90px;
+    border-radius: 20px;
+}
+
+.stepMainContent {
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    padding-inline: 70px;
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+.stepFlex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ff-2;
+}
+
+.stepStyle {
+    background-color: hsl(206, 94%, 87%);
+    color: #000;
+    font-weight: 800;
+    font-family: ff-3;
+    border: 0;
+}
+
+.stepExplanation h6 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: ff-1;
+    color: hsl(231, 11%, 63%);
+    margin-bottom: 6px;
+}
+
+.stepExplanation span {
+    color: #fff;
+    font-weight: 500;
+    font-family: ff-2;
+}
+
+.formText h1 {
+    padding-top: 45px;
+    font-size: 35px;
+    font-weight: 800;
+    font-family: ff-3;
+    margin-bottom: 10px;
+    color: hsl(213, 96%, 18%);
+}
+
+.formText p {
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+    font-family: ff-2;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.clientInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.clientInput label {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ff-2;
+    color: hsl(213, 96%, 18%);
+}
+
+.clientInput input {
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dadada;
+    outline: none;
+    border-radius: 10px;
+    color: #000;
+    padding: 20px;
+}
+
+.clientInput input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ff-2;
+    color: #dadada;
+}
+
+.formButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#goBackButton:hover {
+    text-decoration: underline;
+}
+
+#goBackButton {
+    font-family: ff-2;
+    color: hsl(213, 96%, 18%);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: hsl(213, 96%, 18%);
+    color: #fff;
+    outline: none;
+    border: none;
+    font-family: ff-2;
+    cursor: pointer;
+
+    transition: all 250ms ease;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    opacity: .9;
+}
+
+:is(#nameError, #emailError, #numberError) {
+    color: red;
+    font-size: 12px;
+}
+
+.box {
+    background-color: #000;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    margin-inline: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.notHidden {
+    display: block;
+}
+
+.selectPlanMainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.selectPlanMainContent .selectButton {
+    outline: 1px solid crimson;
+}
+
+.selectButton {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    max-width: 150px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    min-height: 161px;
+}
+
+.selectButton img {
+    margin-bottom: 15px;
+}
+
+.selectButton p {
+    font-size: 18px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    font-family: ff-3;
+    margin-bottom: 5px;
+}
+
+.selectButton span {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: ff-2;
+    color: #b9b6b6;
+}
+
+.timeSpan {
+    /* display: none; */
+    visibility: hidden;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: hsl(213, 96%, 18%) !important;
+    width: max-content;
+    margin-top: 5px;
+}
+
+.selecPeriod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    background-color: hsl(231, 100%, 99%);
+    padding-block: 20px;
+    border-radius: 10px;
+}
+
+.selecPeriod p {
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+    font-family: ff-2;
+}
+
+.specialButton {
+    background-color: hsl(213, 96%, 18%);
+    padding: 5px;
+    border-radius: 50px;
+    width: 65px;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 250ms ease;
+}
+
+.circleStyle {
+    translate: 35px 0;
+}
+
+.addOnButton {
+    background-color: #ffff;
+    border: 1px solid #dadada;
+    padding-inline: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+
+.addOnButton:has(input:checked),
+.addOnButton:hover {
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.addOnButtonMainContent {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-block: 25px;
+}
+
+.addOnButtonMainContent input {
+    height: 20px;
+    width: 20px;
+    color: hsl(243, 100%, 62%);
+}
+
+.addOnButtonMainContent h6 {
+    font-family: ff-2;
+    font-size: 16px;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 5px;
+}
+
+.addOnButtonMainContent p {
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(231, 11%, 63%);
+}
+
+.addOnPrice {
+    font-size: 16px;
+    font-family: ff-2;
+    font-weight: 400;
+    color: hsl(217deg 74.97% 28.74%);
+}
+
+.orderSummaryMainContent {
+    background-color: hsl(231, 100%, 99%);
+    padding-inline: 20px;
+    padding-block: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.monthlyChargesMainContent {
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.monthlyCharges h6 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ff-2;
+    color: hsl(213, 96%, 18%);
+}
+
+.monthlyCharges button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: hsl(243, 100%, 62%);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ff-2;
+}
+
+.orderSummaryMainContent span {
+    font-weight: 800;
+    font-size: 18px;
+    font-family: ff-3;
+    color: hsl(213, 96%, 18%);
+}
+
+.orderSummaryMainContent .onlineService:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.onlineService h5 {
+    color: hsl(217, 15%, 78%);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.onlineService span {
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(213, 96%, 20%)
+}
+
+.totalAmount {
+    padding-inline: 30px;
+}
+
+.totalAmount h5 {
+    font-size: 18px;
+    font-weight: 400;
+    color: hsl(217, 15%, 78%);
+}
+
+.totalAmount span {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: ff-3;
+    color: hsl(243, 100%, 62%);
+}
+
+.thankYou {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.thankYouMainContent {
+    max-width: 437px;
+    width: 100%;
+    text-align: center;
+}
+
+.thankYouMainImg {
+    margin-bottom: 20px;
+}
+
+.thankYouMainContent h5 {
+    font-size: 35px;
+    font-weight: 700;
+    font-family: ff-2;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 25px;
+}
+
+.thankYouMainContent p {
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #888787;
+}
+
+.p-top-160 {
+    padding-top: 160px;
+}
+
+.planStyle {
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+input{
+    transition: all 259ms ease;
+}
+input:focus,
+input:hover {
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.show {
+    visibility: visible !important;
+}

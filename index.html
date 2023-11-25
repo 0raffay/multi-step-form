@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image.png" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Advance-Form-Challenge</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="formContainer">
+                <div class="evenColumns">
+                    <div class="stepMainContent">
+                        <div class="stepFlex">
+                            <div class="step stepStyle" id="step-1">
+                                <span>1</span>
+                            </div>
+                            <div class="stepExplanation">
+                                <h6>STEP 1</h6>
+                                <span>YOUR INFO</span>
+                            </div>
+                        </div>
+                        <div class="stepFlex">
+                            <div class="step" id="step-2">
+                                <span>2</span>
+                            </div>
+                            <div class="stepExplanation">
+                                <h6>STEP 2</h6>
+                                <span>SELECT PLAN</span>
+                            </div>
+                        </div>
+                        <div class="stepFlex">
+                            <div class="step" id="step-3">
+                                <span>3</span>
+                            </div>
+                            <div class="stepExplanation">
+                                <h6>STEP 3</h6>
+                                <span>ADD-ONS</span>
+                            </div>
+                        </div>
+                        <div class="stepFlex">
+                            <div class="step" id="step-4">
+                                <span>4</span>
+                            </div>
+                            <div class="stepExplanation">
+                                <h6>STEP 4</h6>
+                                <span>SUMMARY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mainContainer">
+                            <div class="validateForm">
+                                <div class="formText">
+                                    <h1>Personal Info</h1>
+                                    <p>Please provide your name, email address, and phone number</p>
+                                </div>
+                                <div class="clientInput mb-30">
+                                    <div class="evenColumns" style="width: 100%;">
+                                        <label for="nameInput">Name</label>
+                                        <span id="nameError"></span>
+                                    </div>
+                                    <input type="text" id="nameInput" placeholder="e.g Stephen King"
+                                        onkeyup="putNameValidate()">
+                                </div>
+                                <div class="clientInput mb-30">
+                                    <div class="evenColumns" style="width: 100%;">
+                                        <label for="email">Email</label>
+                                        <span id="emailError"></span>
+                                    </div>
+                                    <input type="email" id="emailInput" placeholder="e.g. stephenking@lorem.com"
+                                        onkeyup="putEmailValidate()">
+                                </div>
+                                <div class="clientInput">
+                                    <div class="evenColumns" style=" width: 100%;">
+                                        <label for="numberInput">Phone Number</label>
+                                        <span id="numberError"></span>
+                                    </div>
+                                    <input type="text" id="numberInput" placeholder="e.g. +1 234 567 890"
+                                        onkeyup="putNumberValidate()">
+                                </div>
+                                <div class="formButton text-align-left">
+                                    <!-- <button id="goBackButton">Go Back</button> -->
+                                    <button class="btn-primary btn-one" id="">Next
+                                        Step</button>
+                                </div>
+                            </div>
+                            <div class="selectPlan hidden" style="width: 500px;">
+                                <div class="formText">
+                                    <h1>Select Your Plan</h1>
+                                    <p>You have the option of monthly and yearly billing</p>
+                                </div>
+                                <div class="selectPlanMainContent">
+                                    <button class="selectButton" id="selectButton-1">
+                                        <img src="assets/images/icon-arcade.svg" alt="Reload Page">
+                                        <p>Arcade</p>
+                                        <span class="priceTagOne">$9/mo</span>
+                                        <span class="timeSpan" id="timeSpanOne">2 months free</span>
+                                    </button>
+                                    <button class="selectButton" id="selectButton-2">
+                                        <img src="assets/images/icon-advanced.svg" alt="Reload Page">
+                                        <p>Advanced</p>
+                                        <span class="priceTagTwo">$12/mo</span>
+                                        <span class="timeSpan" id="timeSpanTwo">2 months free</span>
+                                    </button>
+                                    <button class="selectButton" id="selectButton-3">
+                                        <img src="assets/images/icon-pro.svg" alt="Reload Page">
+                                        <p>Pro</p>
+                                        <span class="priceTagThree">$15/mo</span>
+                                        <span class="timeSpan" id="timeSpanThree">2 months free</span>
+                                    </button>
+                                </div>
+                                <div class="selecPeriod">
+                                    <p>Monthly</p>
+                                    <div class="specialButton">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <p>Yearly</p>
+                                </div>
+                                <div class="formButton">
+                                    <button id="goBackButton" class="returnBtnOne">Go Back</button>
+                                    <button class="btn-primary btn-two" id="nextStepButton">Next Step</button>
+                                </div>
+                            </div>
+                            <div class="addOn hidden" style="width: 500px;">
+                                <div class="formText">
+                                    <h1>Pick add-ons</h1>
+                                    <p>Add-ons help enhance your gaming experience.</p>
+                                </div>
+                                <div class="addOnMainContent">
+                                    <div class="addOnButton evenColumns align-items" id="addOnBtnOne">
+                                        <div class="addOnButtonMainContent">
+                                            <input type="checkbox" class="checkInputOne">
+                                            <div>
+                                                <h6>Online service</h6>
+                                                <p>Access to multiplayer games</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="addOnPrice">
+                                                +$10/yr
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="addOnButton evenColumns align-items" id="addOnBtnTwo">
+                                        <div class="addOnButtonMainContent">
+                                            <input type="checkbox" class="checkInputTwo">
+                                            <div>
+                                                <h6>Larger storage</h6>
+                                                <p>Extra 1TB of cloud save</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="addOnPrice">
+                                                +$20/yr
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="addOnButton evenColumns align-items" id="addOnBtnThree">
+                                        <div class="addOnButtonMainContent">
+                                            <input type="checkbox" class="checkInputThree">
+                                            <div>
+                                                <h6>Customizable profile</h6>
+                                                <p>Custom theme on your profile</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="addOnPrice">
+                                                +$10/yr
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formButton">
+                                    <button id="goBackButton" class="returnBtnTwo">Go Back</button>
+                                    <button class="btn-primary btn-three" id="nextStepButton nextBtnThree">Next
+                                        Step</button>
+                                </div>
+                            </div>
+                            <div class="orderSummary hidden" style="width: 500px;">
+                                <div class="formText">
+                                    <h1>Fininsh up</h1>
+                                    <p>Double-check everything looks OK before confirming.</p>
+                                </div>
+                                <div class="orderSummaryMainContent">
+                                    <div class="monthlyChargesMainContent evenColumns align-items">
+                                        <div class="monthlyCharges">
+                                            <h6 id="planStatus">Arcade (Monthly)</h6>
+                                            <button>Change</button>
+                                        </div>
+                                        <span id="priceOne">$9/mo</span>
+                                    </div>
+                                    <div class="onlineService evenColumns align-items hidden" id="serviceOne">
+                                        <h5>Online service</h5>
+                                        <span>+$1/mo</span>
+                                    </div>
+                                    <div class="onlineService evenColumns align-items mb-20 hidden" id="serviceTwo">
+                                        <h5>Local Storage </h5>
+                                        <span>+$2/mo</span>
+                                    </div>
+                                    <div class="onlineService evenColumns align-items hidden" id="serviceThree">
+                                        <h5>Customizable profile</h5>
+                                        <span>+$2/mo</span>
+                                    </div>
+                                </div>
+                                <div class="totalAmount evenColumns align-items">
+                                    <h5>Total (per month)</h5>
+                                    <span>+$12/mo</span>
+                                </div>
+                                <div class="formButton">
+                                    <button id="goBackButton" class="returnBtnThree">Confirm</button>
+                                    <button class="btn-primary btn-four" id="nextStepButton nextBtnThree">Next
+                                        Step</button>
+                                </div>
+                            </div>
+
+                            <div class="thankYou p-top-160 hidden">
+                                <div class="thankYouMainImg">
+                                    <img src="assets/images/icon-thank-you.svg" alt="Reload Page">
+                                </div>
+                                <div class="thankYouMainContent">
+                                    <h5>Thank you!</h5>
+                                    <p>Thanks for confirming your subscription! We hope you have fun
+                                        using our platform. If you ever need support, please feel free to email us at
+                                        support@loremgaming.com.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
